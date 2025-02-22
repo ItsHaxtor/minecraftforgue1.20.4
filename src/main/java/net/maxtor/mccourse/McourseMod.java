@@ -1,5 +1,7 @@
 package net.maxtor.mccourse;
 
+import net.maxtor.mccourse.item.Moditems;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -34,6 +36,7 @@ public class McourseMod {
     {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+        Moditems.register(modEventBus);
 
 
 
@@ -64,6 +67,11 @@ public class McourseMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event){
+        if (event.getTabKey()== CreativeModeTabs.INGREDIENTS){
+            event.accept(Moditems.BLACK_OPAL);
+            event.accept(Moditems.RAW_BLACK_OPAL);
+            event.accept(Moditems.bloqueWa);
+        }
 
     }
 
