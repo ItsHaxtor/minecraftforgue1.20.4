@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "waland_champions:item/raw_black_opal"
+    "layer0": "waland:item/black_opal"
   }
 }

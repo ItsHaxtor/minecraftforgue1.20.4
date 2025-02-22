@@ -26,7 +26,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 @Mod(McourseMod.MOD_ID)
 public class McourseMod {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "waland_champions";
+    public static final String MOD_ID = "waland";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
